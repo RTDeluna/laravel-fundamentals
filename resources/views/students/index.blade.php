@@ -7,32 +7,58 @@
   </a>
 </header>
 
-<section class="flex justify-evenly sm:static  mb-5 ">
-    <form class="content-start" action="/" method="GET">
-        <label for="sort">Sort by:</label>
-        <select class="px-3 py-1 rounded-full bg-violet-500 text-white" name="order">
-            <option value="asc">A-Z</option>
-            <option value="desc">Z-A</option>
-        </select>
-        <button type="submit" class="px-3 py-1 bg-violet-500 rounded-full text-white"
-        value="age" name="sort"
-        >Age</button>
-        <button type="submit" class="px-3 py-1 bg-violet-500 rounded-full text-white"
-        value="first_name" name="sort">First Name</button>
-        <button type="submit" class="px-3 py-1 bg-violet-500 rounded-full text-white"
-        value="last_name" name="sort"
-        >Last Name</button>
-        <button type="submit" class="px-3 py-1 bg-violet-500 rounded-full  text-white"
-        value="created_at" name="sort"
-        >Created At</button>
+{{-- SEARCH BAR AND SORTING SECTION --}}
+<div class="flex items-center justify-end px-3 py-2 bg-gray-200 mx-auto rounded-lg shadow-sm">
+    <form action="/" method="GET" role="search" class="flex items-center " >
+    @csrf
+    <input id="student" name="student" type="search" class="form-control w-64 px-2 py-1 bg-white border border-gray-400 rounded-l-full" placeholder="Search">
+    <button class="px-6 py-2.5 bg-violet-600 text-white font-medium text-xs leading-tight uppercase rounded-r-full shadow-md hover:bg-violet-700 hover:shadow-lg focus:bg-violet-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-violet-800 active:shadow-lg transition duration-150 ease-in-out flex items-center" type="submit" id="button-addon2">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
     </form>
-    <form action="/" class="flex" role="search">
-        <input type="search" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-l-full transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search" name='student' id='student' >
-        <button class="px-6 py-2.5 bg-violet-600 text-white font-medium text-xs leading-tight uppercase rounded-r-full shadow-md hover:bg-violet-700 hover:shadow-lg focus:bg-violet-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-violet-800 active:shadow-lg transition duration-150 ease-in-out flex items-center" type="submit" id="button-addon2">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+</div>
+<section class="flex flex-col gap-2 lg:flex-row justify-between w-5/6 mx-auto my-8">
+    <form  action="/" method="GET"  class="flex gap-2 flex-wrap justify-between md:mx-0 items-center">
+      @csrf
+      <label for="sort">Sort by:</label>
+      <button
+        type="submit"
+        class="py-2 px-4 bg-violet-500 text-white rounded-full hover:bg-violet-700 hover:shadow-lg focus:bg-violet-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-violet-800 active:shadow-lg transition duration-150 ease-in-out"
+        name="sort"
+        value="first_name"
+      >
+      First Name
+      </button>
+      <button
+        type="submit"
+        class="py-2 px-4 bg-violet-500 text-white rounded-full hover:bg-violet-700 hover:shadow-lg focus:bg-violet-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-violet-800 active:shadow-lg transition duration-150 ease-in-out"
+        name="sort"
+        value="last_name"
+      >
+      Last Name
+      </button>
+      <button
+        type="submit"
+        class="py-2 px-4 bg-violet-500 text-white rounded-full hover:bg-violet-700 hover:shadow-lg focus:bg-violet-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-violet-800 active:shadow-lg transition duration-150 ease-in-out"
+        name="sort"
+        value="age"
+      >
+      Age
+      </button>
+      <button
+        type="submit"
+        class="py-2 px-4 bg-violet-500 text-white rounded-full hover:bg-violet-700 hover:shadow-lg focus:bg-violet-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-violet-800 active:shadow-lg transition duration-150 ease-in-out"
+        name="sort"
+        value="created_at"
+      >
+      Create At
+    </button>
+    <select name='order' class="py-2 px-4 bg-violet-500 text-white rounded-sm hover:bg-violet-700 hover:shadow-lg focus:bg-violet-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-violet-800 active:shadow-lg transition duration-150 ease-in-out">
+      <option value="desc">Z-A</option>
+      <option value="asc">A-Z</option>
+    </select>
     </form>
-</section>
+  </section>
 
 {{-- add new student --}}
 <div x-data='{createModalOpen: false}'>

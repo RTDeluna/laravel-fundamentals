@@ -24,14 +24,14 @@
           From: "opacity-100 translate-y-0 sm:scale-100"
           To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       -->
-      <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg md:my-8 md:w-full md:max-w-lg">
-        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+      <div class="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg md:my-8 md:w-full md:max-w-lg">
+        <div class="bg-gray-50 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
           <div class=" sm:items-start p-4 md:block">
               <h3 class="text-lg font-bold leading-6 text-gray-900 text-center" id="modal-title">Update Student Information</h3>
             <div class="sm:text-start">
 
               {{-- FORM START --}}
-              <div class="block p-6 mt-5 rounded-lg bg-gray-200 max-w-md">
+              <div class="block p-6 mt-5 rounded-xl bg-gray-50 max-w-md">
                 <form action="/student/{{ $student->id }}" method="POST">
                     @method('PUT')
                     @csrf
@@ -48,7 +48,7 @@
                         font-normal
                         text-gray-700
                         bg-white bg-clip-padding
-                        border border-solid border-gray-300
+                        border border-solid border-gray-400
                         rounded
                         transition
                         ease-in-out
@@ -73,7 +73,7 @@
                         font-normal
                         text-gray-700
                         bg-white bg-clip-padding
-                        border border-solid border-gray-300
+                        border border-solid border-gray-400
                         rounded
                         transition
                         ease-in-out
@@ -101,7 +101,7 @@
                         font-normal
                         text-gray-700
                         bg-white bg-clip-padding
-                        border border-solid border-gray-300
+                        border border-solid border-gray-400
                         rounded
                         transition
                         ease-in-out
@@ -126,7 +126,7 @@
                       font-normal
                       text-gray-700
                       bg-white bg-clip-padding bg-no-repeat
-                      border border-solid border-gray-300
+                      border border-solid border-gray-400
                       rounded
                       transition
                       ease-in-out
@@ -153,7 +153,7 @@
                       font-normal
                       text-gray-700
                       bg-white bg-clip-padding
-                      border border-solid border-gray-300
+                      border border-solid border-gray-400
                       rounded
                       transition
                       ease-in-out
@@ -167,8 +167,8 @@
                       @enderror
                   </div>
                     <div class="px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 ">
-                        <button type="submit" class="inline-flex w-full justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-base font-semibold text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Update</button>
-                        <button @click='editModalOpen = !editModalOpen' type="button" class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-semibold text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Back</button>
+                        <button type="submit" class="inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base sm:md:lg:font-semibold text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Update</button>
+                        <button @click='editModalOpen = !editModalOpen' type="button" class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base sm:md:lg:font-semibold text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Back</button>
                     </div>
                 </form>
               </div>

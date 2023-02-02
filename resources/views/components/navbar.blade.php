@@ -1,7 +1,7 @@
   <nav x-data="{ open: false }" class="bg-white px-2 sm:px-4 py-2.5 sticky w-full z-20 top-0 left-0 border-b border-gray-200 shadow-violet-300 shadow-lg">
   <div class="container flex flex-wrap items-center justify-between mx-auto">
     <div class="flex items-center gap-1">
-        <a href="/"><img class="content-start h-16 w-16" src="/img/logo.png"></a>
+        <a href="/"><img class="ml-5 h-16 w-16" src="/img/logo.png"></a>
           <h1 class="block font-bold"><span class="text-orange-600">K</span><span class="text-blue-700">D</span><span class="text-cyan-500">G</span><span class="text-green-600">O</span></h1>
     </div>
 

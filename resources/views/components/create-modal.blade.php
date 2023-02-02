@@ -24,20 +24,20 @@
           To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
       -->
       <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+        <div class="bg-gray-50 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
           <div class="sm:flex sm:items-start p-4 md:block">
               <h3 class="text-lg font-bold leading-6 text-gray-900 text-center" id="modal-title text-center">Add New Student</h3>
             <div class="sm:text-start">
 
               {{-- FORM START --}}
-              <div class="block p-6 mt-5 rounded-lg bg-gray-200 max-w-md">
+              <div class="block p-6 mt-5 rounded-lg bg-gray-50 max-w-md">
                 <form action="/add/student" method="POST">
                     @csrf
                   <div class="grid grid-cols-2 gap-4">
                     {{-- FIRSTNAME --}}
                     <div class="form-group mb-6">
                       <label for="first_name">First Name</label>
-                      <input type="text" name="first_name" class="form-control
+                      <input type="text" name="first_name" placeholder="Juan" class="form-control
                         block
                         w-full
                         px-3
@@ -46,12 +46,12 @@
                         font-normal
                         text-gray-700
                         bg-white bg-clip-padding
-                        border border-solid border-gray-300
+                        border border-solid border-gray-400
                         rounded
                         transition
                         ease-in-out
                         mt-1
-                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" value={{old('first_name')}}>
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" value={{old('first_name')}} >
                         @error('first_name')
                         <p class="text-red-500 text-xs mt-2">
                             {{$message}}
@@ -61,7 +61,7 @@
                     {{-- LASTNAME --}}
                     <div class="form-group mb-6">
                       <label for="last_name">Last Name</label>
-                      <input type="text" name="last_name" class="form-control
+                      <input type="text" name="last_name" placeholder="Dela Cruz" class="form-control
                         block
                         w-full
                         px-3
@@ -70,12 +70,12 @@
                         font-normal
                         text-gray-700
                         bg-white bg-clip-padding
-                        border border-solid border-gray-300
+                        border border-solid border-gray-400
                         rounded
                         transition
                         ease-in-out
                         mt-1
-                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" value={{old('last_name')}}>
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" value={{old('last_name')}} >
                         @error('last_name')
                         <p class="text-red-500 text-xs mt-2">
                             {{$message}}
@@ -97,7 +97,7 @@
                         font-normal
                         text-gray-700
                         bg-white bg-clip-padding
-                        border border-solid border-gray-300
+                        border border-solid border-gray-400
                         rounded
                         transition
                         ease-in-out
@@ -121,7 +121,7 @@
                       font-normal
                       text-gray-700
                       bg-white bg-clip-padding bg-no-repeat
-                      border border-solid border-gray-300
+                      border border-solid border-gray-400
                       rounded
                       transition
                       ease-in-out
@@ -140,7 +140,7 @@
 
                   <div class="form-group mb-6">
                     <label for="email">Email</label>
-                    <input type="email" name="email" class="form-control block
+                    <input type="email" name="email" placeholder="yourname@gmail.com" class="form-control block
                       w-full
                       px-3
                       py-1.5
@@ -148,12 +148,12 @@
                       font-normal
                       text-gray-700
                       bg-white bg-clip-padding
-                      border border-solid border-gray-300
+                      border border-solid border-gray-400
                       rounded
                       transition
                       ease-in-out
                       mt-1
-                      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"  value={{old('email')}}>
+                      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"  value={{old('email')}} >
                       @error('email')
                       <p class="text-red-500 text-xs mt-2">
                           {{$message}}
@@ -161,8 +161,8 @@
                       @enderror
                   </div>
                     <div class=" px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                        <button type="submit" class="inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base  text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm font-semibold">Add New Student</button>
-                        <button @click='createModalOpen = !createModalOpen' type="button" class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-semibold text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Back</button>
+                        <button type="submit" class="inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base  text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm sm:md:lg:font-semibold">Add New Student</button>
+                        <button @click='createModalOpen = !createModalOpen' type="button" class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base sm:md:lg:font-semibold text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Back</button>
                     </div>
                 </form>
               </div>
